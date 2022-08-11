@@ -112,6 +112,7 @@ for(let i=0; i<ante.length; i++){
         e.target.style.color="green";
         subAmount = e.target.innerText;
         placedBet();
+        console.log(ante)
     })
 }
 
@@ -123,6 +124,13 @@ function placedBet() {
             const startInterval = setInterval(rotateImages, 30);
             stop.addEventListener("click", () => {
                 clearInterval(startInterval)
+                console.log(massImg[3].outerHTML === massImg[4].outerHTML === massImg[5].outerHTML)
+                // console.log(massImg[4].outerHTML)
+                // console.log(massImg[5].outerHTML)
+                console.log(totalMoney)
+                console.log(checkForWin())
+                checkForWin();
+                // spendMoney()
             })
         }  
     })
@@ -133,9 +141,10 @@ function placedBet() {
 
 function checkForWin (){
     // for(let i=0; i<5; i++){
-        if((massImg[3] == massImg[4] && massImg[4] === massImg[5])){
+        if(((massImg[3].outerHTML) === (massImg[4].outerHTML)) && ((massImg[4].outerHTML) === (massImg[5].outerHTML))){
             totalMoney+=500
-        }
+            return true
+        } else { return false}
     //}
 }
 // && massImg[4].src === massImg[5].src

@@ -1,24 +1,33 @@
+* {
+    
+}
+
 body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;  
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    width: 680px;
-    height: 680px;
+    width: 90vw;
+    height: 90vh;
     gap: 10px;
     padding: 20px;
-    margin: 0px;
+    margin: auto;
     background-color: gold;
 }
 
 .legend{
     background: #0066b2;
     color: whitesmoke;
-    font-size: 17px;
+    font-size: 2vh;
     grid-column: 6/span 4;
     text-align: center;
     grid-row: 1;
     border-radius: 25px;
     border: 3px black solid;
+    
 }
 
 .playerMoney{
@@ -28,6 +37,8 @@ body {
     background-color: #F0F0F0;
     grid-column: 3;
     grid-row: 1;
+    align-self: center;
+    width: auto;
 }
 
 .money {
@@ -38,13 +49,12 @@ body {
 }
 
 .slots {
-    background-color: #484848;
+    background-color: gold;
     grid-column: 2/span 5;
     grid-row: 3/ span 5;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
     width: auto;
     justify-items: center;
     align-items: center;
@@ -53,11 +63,11 @@ body {
 .slot {
     border: black solid 5px;
     background-color: white;
-    width: 100%;
-    height: 100%;
+    width: 15vw;
+    height: 15vh;
     display: flex;
     justify-content: center;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .betSign {
@@ -66,7 +76,7 @@ body {
     text-align: center;
     font-weight: 700;
     text-decoration: underline;
-    font-size: 75px;
+    font-size: 15vh;
     align-self:center;
 }
 
@@ -78,6 +88,7 @@ body {
     grid-row: 4;
     width: auto;
     gap: 5px;
+    margin-top: 5px;
 }
 
 .ante {
@@ -95,17 +106,18 @@ body {
     grid-row: 6/span 3;
     border-radius: 50%;
     color: whitesmoke;
-    font-size: 350%;
+    font-size: 13vh;
     border: 3px black solid;
 }
 
 .stopButton {
     background: rgb(255, 47, 47);
     color: whitesmoke;
-    font-size: 400%;
+    font-size: 13vh;
     grid-column: 2/span 5;
     grid-row: 8/span 3;
     border-radius: 20px;
     border: 3px black solid;
-    margin-top: 20px;
+    margin-top: 30px;
+    height: 14vh;
 }

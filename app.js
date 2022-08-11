@@ -111,11 +111,10 @@ for(let i=0; i<ante.length; i++){
         e.target.style.borderColor="green";
         e.target.style.color="green";
         subAmount = e.target.innerText;
+        targetOuterHTML = e.target.outerHTML
         placedBet();
-        console.log(ante)
     })
 }
-
 function placedBet() {
     play.addEventListener("click", () =>{
         if(totalMoney>=subAmount) {
@@ -130,7 +129,7 @@ function placedBet() {
                 console.log(totalMoney)
                 console.log(checkForWin())
                 checkForWin();
-                // spendMoney()
+                spendMoney()
             })
         }  
     })

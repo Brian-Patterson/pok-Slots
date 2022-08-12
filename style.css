@@ -21,7 +21,7 @@ body {
 .legend{
     background: #0066b2;
     color: whitesmoke;
-    font-size: 2vh;
+    font-size: 2.5vh;
     grid-column: 6/span 4;
     text-align: center;
     grid-row: 1;
@@ -72,7 +72,7 @@ body {
 
 .betSign {
     grid-column: 8;
-    grid-row: 2/span 2;
+    grid-row: 3/span 2;
     text-align: center;
     font-weight: 700;
     text-decoration: underline;
@@ -85,10 +85,10 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     background-color: gold;
     grid-column: 8;
-    grid-row: 4;
+    grid-row: 5;
     width: auto;
     gap: 5px;
-    margin-top: 5px;
+    margin-top: 30px;
 }
 
 .ante {
@@ -103,7 +103,7 @@ body {
 .playButton {
     background: green;
     grid-column: 8;
-    grid-row: 6/span 3;
+    grid-row: 7/span 6;
     border-radius: 50%;
     color: whitesmoke;
     font-size: 13vh;
@@ -115,9 +115,9 @@ body {
     color: whitesmoke;
     font-size: 13vh;
     grid-column: 2/span 5;
-    grid-row: 8/span 3;
+    grid-row: 10/span 3;
     border-radius: 20px;
     border: 3px black solid;
-    margin-top: 30px;
+    /* margin-top: 20px; */
     height: 14vh;
 }

@@ -105,15 +105,6 @@ function spendMoney(){
 spendMoney();
 
 let subAmount = 0;
-// for(let i=0; i<ante.length; i++){
-//     ante[i].addEventListener("click", (e) => {
-//         fadeToBlack();
-//         e.target.style.borderColor="green";
-//         e.target.style.color="green";
-//         subAmount = e.target.innerText;
-//         placedBet();
-//     }) 
-// }
 
 ante.forEach(item=>{
     item.addEventListener("click", (e) => {
@@ -134,16 +125,12 @@ ante.forEach(item=>{
             const startInterval = setInterval(rotateImages, 30);
             stop.addEventListener("click", () => {
                 clearInterval(startInterval)
-                console.log(checkForWin())
                 checkForWin();
                 spendMoney()
             })
         }  
     })
 // }
-
-
-
 
 function checkForWin (){
     if(ante[0].style.color==="green"){
@@ -165,30 +152,4 @@ function checkForWin (){
                 totalMoney+=300;    
                 return false}
         }
-}
-// && massImg[4].src === massImg[5].src
-//RETURNS THE SOURCE
-//console.log(massImg[0].src)
-
-
-//TROY'S TicTacToe SOLUTION
-function checkWin() {
-    let state = ['','','','','','','','',''];
-    arrSymbols.forEach((arrSymbols, idx) => {
-        state[idx] = arrSymbols.textContent;
-    })
-    //console.log(state)
-
-    const winConditions = [
-        state[0] + state[1] + state[2],
-        state[3] + state[4] + state[5],
-        state[6] + state[7] + state[8],
-        state[0] + state[3] + state[6],
-        state[1] + state[4] + state[7],
-        state[2] + state[5] + state[8],
-        state[0] + state[4] + state[8],
-        state[2] + state[4] + state[6],
-    ]
-    const winner = winConditions.includes(`${massImg[3].src}${massImg[4].src}${massImg[5].src}`)
-    return winner
 }

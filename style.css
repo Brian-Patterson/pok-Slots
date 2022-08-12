@@ -117,32 +117,31 @@ body {
     /* margin-top: 20px; */
     height: 14vh;
 }
+
+
 @media only screen and (max-width: 600px){
     body {
         display: flex;
-        justify-content: center;
-        align-content: center;
-        justify-self: center;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;  
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;  
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         width: 90vw;
         height: 90vh;
-        gap: 10px;
-        /* padding: 20px; */
-        margin: auto;
+        margin: 15px;
         background-color: pink;
     }
     
     .legend{
         background: #0066b2;
         color: whitesmoke;
-        font-size: 2vh;
-        grid-column: 6/span 3;
+        font-size: 1.5vh;
+        grid-column: 4/span 3;
         text-align: center;
-        grid-row: 1;
+        grid-row: 1/span 2;
         border-radius: 25px;
         border: 3px black solid;
+        padding: 5px;
+        justify-self: end;
         
     }
     
@@ -151,28 +150,30 @@ body {
         grid-template-columns: repeat(4, minmax(25%, 1fr));
         border: black solid;
         background-color: #F0F0F0;
-        grid-column: 3;
-        grid-row: 1;
+        grid-column: 1/span 4;
+        grid-row: 1/span 2;
         align-self: center;
-        width: auto;
+        width: 70%;
     }
     
     .money {
         width: 100%;
         height: 100%;
         border: black solid;
-        font-size: 12vh;
+        font-size: 7vh;
     }
     
     .slots {
-        grid-row: 2/ span 4;
+        grid-row: 6;
+        grid-column: 1/span 6;
         background-color: pink;
         display: grid;
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
-        width: auto;
+        /* width: 20vw; */
         justify-items: top;
         align-items: top;
+        margin: auto;
     }
     
     .slot {
@@ -186,21 +187,15 @@ body {
     }
     
     .betSign {
-        grid-column: 8;
-        grid-row: 1/span 4;
-        text-align: top;
-        font-weight: 700;
-        text-decoration: underline;
-        font-size: 12vh;
-        align-self: top;
+      display: none;
     }
     
     .bet {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         background-color: pink;
-        grid-column: 8;
-        grid-row: 4;
+        grid-column: 5/span 2;
+        grid-row: 3;
         width: auto;
         gap: 5px;
         margin-top: 0px;
@@ -210,30 +205,31 @@ body {
         width: 100%;
         height: 100%;
         border: black solid;
-        font-size: 12vh;
+        font-size: 7vh;
         align-self: center;
         background-color: whitesmoke;
     }
     
     .playButton {
         background: green;
-        grid-column: 8;
-        grid-row: 5/span 4;
-        border-radius: 50%;
+        grid-column: 1/span 3;
+        grid-row: 4/span 3;
+        border-radius: 20%;
         color: whitesmoke;
-        font-size: 10vh;
+        font-size: 7vh;
         border: 3px black solid;
+        height: 8vh;
     }
     
     .stopButton {
         background: rgb(255, 47, 47);
         color: whitesmoke;
-        font-size: 10vh;
-        grid-column: 2/span 5;
-        grid-row: 7;
+        font-size: 7vh;
+        grid-column: 1/span 3;
+        grid-row: 3/span 3;
         border-radius: 20px;
         border: 3px black solid;
         /* margin-top: 20px; */
-        height: 11vh;
+        height: 8vh;
     }
 }

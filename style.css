@@ -213,6 +213,8 @@ body {
     
     .playButton {
         background: green;
+        display: flex;
+        justify-content: center;
         grid-column: 1/span 3;
         grid-row: 3/span 3;
         border-radius: 20%;
@@ -225,6 +227,8 @@ body {
     
     .stopButton {
         background: rgb(255, 47, 47);
+        display: flex;
+        justify-content: center;
         color: whitesmoke;
         font-size: 7vh;
         grid-column: 1/span 3;

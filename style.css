@@ -219,6 +219,7 @@ body {
         font-size: 7vh;
         border: 3px black solid;
         height: 8vh;
+        text-align: center;
     }
     
     .stopButton {
@@ -231,5 +232,6 @@ body {
         border: 3px black solid;
         /* margin-top: 20px; */
         height: 8vh;
+        text-align: center;
     }
 }

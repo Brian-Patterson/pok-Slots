@@ -117,19 +117,23 @@ ante.forEach(item=>{
     }) 
 });
 
+let startInterval;
 // function placedBet() {
-    play.addEventListener("click", () =>{
-        if(totalMoney>=subAmount) {
-            totalMoney=totalMoney-subAmount;
-            spendMoney();
-            const startInterval = setInterval(rotateImages, 30);
-            stop.addEventListener("click", () => {
-                clearInterval(startInterval)
-                checkForWin();
-                spendMoney()
-            })
-        }  
-    })
+play.addEventListener("click", () =>{
+    if(totalMoney>=subAmount) {
+        totalMoney=totalMoney-subAmount;
+        spendMoney();
+        startInterval = setInterval(rotateImages, 30);
+    }})
+
+stop.addEventListener("click", () => {
+    console.log(totalMoney)
+    clearInterval(startInterval)
+    checkForWin();
+    spendMoney()
+})
+        
+    
 // }
 
 function checkForWin (){
@@ -141,15 +145,15 @@ function checkForWin (){
             if(((massImg[3].outerHTML) === (massImg[4].outerHTML)) && ((massImg[4].outerHTML) === (massImg[5].outerHTML))||
             (((massImg[0].outerHTML) === (massImg[1].outerHTML)) && ((massImg[1].outerHTML) === (massImg[2].outerHTML)))||
             (((massImg[6].outerHTML) === (massImg[7].outerHTML)) && ((massImg[7].outerHTML) === (massImg[8].outerHTML)))){
-                totalMoney+=200;    
-                return true}
+            totalMoney+=200;    
+            return true}
         } else if (ante[2].style.color==="green"){
             if(((massImg[3].outerHTML) === (massImg[4].outerHTML)) && ((massImg[4].outerHTML) === (massImg[5].outerHTML))||
             (((massImg[0].outerHTML) === (massImg[1].outerHTML)) && ((massImg[1].outerHTML) === (massImg[2].outerHTML)))||
             (((massImg[6].outerHTML) === (massImg[7].outerHTML)) && ((massImg[7].outerHTML) === (massImg[8].outerHTML)))||
             (((massImg[0].outerHTML) === (massImg[4].outerHTML)) && ((massImg[4].outerHTML) === (massImg[8].outerHTML)))||
             (((massImg[2].outerHTML) === (massImg[4].outerHTML)) && ((massImg[4].outerHTML) === (massImg[6].outerHTML)))){
-                totalMoney+=300;    
-                return false}
+            totalMoney+=300;    
+            return true}
         }
 }

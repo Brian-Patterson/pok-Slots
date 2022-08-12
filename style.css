@@ -63,7 +63,7 @@ body {
     height: 15vh;
     display: flex;
     justify-content: center;
-    /* padding: 5px; */
+    padding: 5px;
 }
 
 .betSign {
@@ -137,7 +137,7 @@ body {
         font-size: 1.5vh;
         grid-column: 4/span 3;
         text-align: center;
-        grid-row: 1/span 2;
+        grid-row: 1;
         border-radius: 25px;
         border: 3px black solid;
         padding: 5px;
@@ -151,7 +151,7 @@ body {
         border: black solid;
         background-color: #F0F0F0;
         grid-column: 1/span 4;
-        grid-row: 1/span 2;
+        grid-row: 1;
         align-self: center;
         width: 70%;
     }
@@ -164,7 +164,7 @@ body {
     }
     
     .slots {
-        grid-row: 6;
+        grid-row: 4/span 2;
         grid-column: 1/span 6;
         background-color: pink;
         display: grid;
@@ -179,8 +179,8 @@ body {
     .slot {
         border: black solid 5px;
         background-color: white;
-        width: 12vw;
-        height: 12vh;
+        /* width: 12vw;
+        height: 12vh; */
         display: flex;
         justify-content: top;
         /* padding: 5px; */
@@ -195,10 +195,11 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         background-color: pink;
         grid-column: 5/span 2;
-        grid-row: 3;
+        grid-row: 2;
         width: auto;
         gap: 5px;
         margin-top: 0px;
+        text-align: center;
     }
     
     .ante {
@@ -213,7 +214,7 @@ body {
     .playButton {
         background: green;
         grid-column: 1/span 3;
-        grid-row: 4/span 3;
+        grid-row: 3/span 3;
         border-radius: 20%;
         color: whitesmoke;
         font-size: 7vh;
@@ -227,7 +228,7 @@ body {
         color: whitesmoke;
         font-size: 7vh;
         grid-column: 1/span 3;
-        grid-row: 3/span 3;
+        grid-row: 2/span 3;
         border-radius: 20px;
         border: 3px black solid;
         /* margin-top: 20px; */

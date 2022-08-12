@@ -1,7 +1,3 @@
-* {
-    
-}
-
 body {
     display: flex;
     justify-content: center;
@@ -120,4 +116,124 @@ body {
     border: 3px black solid;
     /* margin-top: 20px; */
     height: 14vh;
+}
+@media only screen and (max-width: 600px){
+    body {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        justify-self: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;  
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: 90vw;
+        height: 90vh;
+        gap: 10px;
+        /* padding: 20px; */
+        margin: auto;
+        background-color: pink;
+    }
+    
+    .legend{
+        background: #0066b2;
+        color: whitesmoke;
+        font-size: 2vh;
+        grid-column: 6/span 3;
+        text-align: center;
+        grid-row: 1;
+        border-radius: 25px;
+        border: 3px black solid;
+        
+    }
+    
+    .playerMoney{
+        display: grid;
+        grid-template-columns: repeat(4, minmax(25%, 1fr));
+        border: black solid;
+        background-color: #F0F0F0;
+        grid-column: 3;
+        grid-row: 1;
+        align-self: center;
+        width: auto;
+    }
+    
+    .money {
+        width: 100%;
+        height: 100%;
+        border: black solid;
+        font-size: 12vh;
+    }
+    
+    .slots {
+        grid-row: 2/ span 4;
+        background-color: pink;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        width: auto;
+        justify-items: top;
+        align-items: top;
+    }
+    
+    .slot {
+        border: black solid 5px;
+        background-color: white;
+        width: 12vw;
+        height: 12vh;
+        display: flex;
+        justify-content: top;
+        /* padding: 5px; */
+    }
+    
+    .betSign {
+        grid-column: 8;
+        grid-row: 1/span 4;
+        text-align: top;
+        font-weight: 700;
+        text-decoration: underline;
+        font-size: 12vh;
+        align-self: top;
+    }
+    
+    .bet {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: pink;
+        grid-column: 8;
+        grid-row: 4;
+        width: auto;
+        gap: 5px;
+        margin-top: 0px;
+    }
+    
+    .ante {
+        width: 100%;
+        height: 100%;
+        border: black solid;
+        font-size: 12vh;
+        align-self: center;
+        background-color: whitesmoke;
+    }
+    
+    .playButton {
+        background: green;
+        grid-column: 8;
+        grid-row: 5/span 4;
+        border-radius: 50%;
+        color: whitesmoke;
+        font-size: 10vh;
+        border: 3px black solid;
+    }
+    
+    .stopButton {
+        background: rgb(255, 47, 47);
+        color: whitesmoke;
+        font-size: 10vh;
+        grid-column: 2/span 5;
+        grid-row: 7;
+        border-radius: 20px;
+        border: 3px black solid;
+        /* margin-top: 20px; */
+        height: 11vh;
+    }
 }

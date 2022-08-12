@@ -104,18 +104,29 @@ function spendMoney(){
 }
 spendMoney();
 
-let subAmount = "";
-for(let i=0; i<ante.length; i++){
-    ante[i].addEventListener("click", (e) => {
+let subAmount = 0;
+// for(let i=0; i<ante.length; i++){
+//     ante[i].addEventListener("click", (e) => {
+//         fadeToBlack();
+//         e.target.style.borderColor="green";
+//         e.target.style.color="green";
+//         subAmount = e.target.innerText;
+//         placedBet();
+//     }) 
+// }
+
+ante.forEach(item=>{
+    item.addEventListener("click", (e) => {
         fadeToBlack();
         e.target.style.borderColor="green";
         e.target.style.color="green";
-        subAmount = e.target.innerText;
-        targetOuterHTML = e.target.outerHTML
-        placedBet();
-    })
-}
-function placedBet() {
+        subAmount = 0;
+        subAmount = Number(e.target.innerText);
+        // placedBet();
+    }) 
+});
+
+// function placedBet() {
     play.addEventListener("click", () =>{
         if(totalMoney>=subAmount) {
             totalMoney=totalMoney-subAmount;
@@ -123,28 +134,37 @@ function placedBet() {
             const startInterval = setInterval(rotateImages, 30);
             stop.addEventListener("click", () => {
                 clearInterval(startInterval)
-                console.log(massImg[3].outerHTML === massImg[4].outerHTML === massImg[5].outerHTML)
-                // console.log(massImg[4].outerHTML)
-                // console.log(massImg[5].outerHTML)
-                console.log(totalMoney)
                 console.log(checkForWin())
                 checkForWin();
                 spendMoney()
             })
         }  
     })
-}
+// }
 
 
 
 
 function checkForWin (){
-    // for(let i=0; i<5; i++){
+    if(ante[0].style.color==="green"){
         if(((massImg[3].outerHTML) === (massImg[4].outerHTML)) && ((massImg[4].outerHTML) === (massImg[5].outerHTML))){
-            totalMoney+=500
-            return true
-        } else { return false}
-    //}
+            totalMoney+=100;
+            return true}
+        } else if (ante[1].style.color==="green"){
+            if(((massImg[3].outerHTML) === (massImg[4].outerHTML)) && ((massImg[4].outerHTML) === (massImg[5].outerHTML))||
+            (((massImg[0].outerHTML) === (massImg[1].outerHTML)) && ((massImg[1].outerHTML) === (massImg[2].outerHTML)))||
+            (((massImg[6].outerHTML) === (massImg[7].outerHTML)) && ((massImg[7].outerHTML) === (massImg[8].outerHTML)))){
+                totalMoney+=200;    
+                return true}
+        } else if (ante[2].style.color==="green"){
+            if(((massImg[3].outerHTML) === (massImg[4].outerHTML)) && ((massImg[4].outerHTML) === (massImg[5].outerHTML))||
+            (((massImg[0].outerHTML) === (massImg[1].outerHTML)) && ((massImg[1].outerHTML) === (massImg[2].outerHTML)))||
+            (((massImg[6].outerHTML) === (massImg[7].outerHTML)) && ((massImg[7].outerHTML) === (massImg[8].outerHTML)))||
+            (((massImg[0].outerHTML) === (massImg[4].outerHTML)) && ((massImg[4].outerHTML) === (massImg[8].outerHTML)))||
+            (((massImg[2].outerHTML) === (massImg[4].outerHTML)) && ((massImg[4].outerHTML) === (massImg[6].outerHTML)))){
+                totalMoney+=300;    
+                return false}
+        }
 }
 // && massImg[4].src === massImg[5].src
 //RETURNS THE SOURCE
